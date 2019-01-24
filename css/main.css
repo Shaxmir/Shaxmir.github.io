@@ -19,7 +19,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 650px; }
+  height: 650px;
+  position: relative; }
 
 .bg_two {
   flex: 1 0 auto;
@@ -28,7 +29,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 650px; }
+  height: 650px;
+  position: relative; }
+
+.bg .test {
+  background: url("/img/texture.png");
+  width: 100%;
+  height: 100%;
+  position: absolute; }
 
 .footer {
   flex: 0 0 auto; }
@@ -42,7 +50,8 @@ body {
   width: 1100px;
   margin: 0 auto;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .header_block .menu {
     width: 670px;
     font-family: "open";
@@ -67,7 +76,7 @@ body {
     font-family: "open";
     font-weight: 200;
     font-style: normal;
-    background: #e45028;
+    background: #c1401e;
     width: 100px;
     height: 35px;
     border-radius: 5px;
@@ -75,7 +84,10 @@ body {
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    font-size: 12px; }
+    font-size: 12px;
+    transition: 0.4s; }
+  .header_block .buy:hover {
+    background: #e45028; }
 
 .start_page {
   display: flex;
@@ -144,5 +156,253 @@ body {
     top: 32%;
     left: 32%;
     position: absolute; }
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  color: #2f3234;
+  font-family: "open";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 50px; }
+
+.conteiner {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .conteiner .conteiner_in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px; }
+  .conteiner .title_present {
+    font-family: "open";
+    font-weight: 100;
+    font-style: normal;
+    color: #2f3234;
+    margin-top: 20px;
+    text-align: center; }
+  .conteiner .text {
+    font-family: "open";
+    font-weight: 300;
+    font-style: normal;
+    color: #2f3234;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 1px; }
+
+.bg_three {
+  flex: 1 0 auto;
+  width: 100%;
+  height: 650px; }
+  .bg_three .rewievs {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+    .bg_three .rewievs .block_rewievs {
+      width: 340px;
+      height: 325px;
+      position: relative; }
+    .bg_three .rewievs .block_rewievs .rewievs_text {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      opacity: 0; }
+      .bg_three .rewievs .block_rewievs .rewievs_text .title_rew {
+        font-size: 20px;
+        font-family: "open";
+        font-weight: bold;
+        font-style: normal;
+        margin-bottom: 25px; }
+      .bg_three .rewievs .block_rewievs .rewievs_text .text {
+        margin-bottom: 25px;
+        width: 200px;
+        font-family: "open";
+        font-weight: 300;
+        font-style: normal; }
+    .bg_three .rewievs .rewievs_link {
+      color: #fff;
+      text-decoration: none;
+      background: #1f2122;
+      padding: 10px 18px;
+      text-transform: uppercase;
+      border-radius: 5px;
+      font-family: "open";
+      font-weight: 200;
+      font-style: normal;
+      transition: 0.4s; }
+    .bg_three .rewievs .rewievs_link:hover {
+      background: #2f3234; }
+    .bg_three .rewievs .one {
+      background-image: url("/img/one.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%); }
+    .bg_three .rewievs .two {
+      background-image: url("/img/two.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%); }
+    .bg_three .rewievs .three {
+      background-image: url("/img/three.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%); }
+    .bg_three .rewievs .four {
+      background-image: url("/img/four.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%); }
+    .bg_three .rewievs .five {
+      background-image: url("/img/five.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%); }
+    .bg_three .rewievs .six {
+      background-image: url("/img/six.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%); }
+    .bg_three .rewievs .seven {
+      background-image: url("/img/seven.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%); }
+    .bg_three .rewievs .eigth {
+      background-image: url("/img/eigth.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%); }
+    .bg_three .rewievs .one_color {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%; }
+    .bg_three .rewievs .two_color {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%; }
+    .bg_three .rewievs .three_color {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%; }
+    .bg_three .rewievs .four_color {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%; }
+    .bg_three .rewievs .five_color {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%; }
+    .bg_three .rewievs .six_color {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%; }
+    .bg_three .rewievs .seven_color {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%; }
+    .bg_three .rewievs .eigth_color {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%; }
+    .bg_three .rewievs .block_rewievs:hover .one_color {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      transition: 0.4s; }
+    .bg_three .rewievs .block_rewievs:hover .rewievs_text {
+      opacity: 1;
+      transition: .5s; }
+    .bg_three .rewievs .block_rewievs:hover .two_color {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      transition: 0.4s; }
+    .bg_three .rewievs .block_rewievs:hover .rewievs_text {
+      opacity: 1;
+      transition: .5s; }
+    .bg_three .rewievs .block_rewievs:hover .three_color {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      transition: 0.4s; }
+    .bg_three .rewievs .block_rewievs:hover .rewievs_text {
+      opacity: 1;
+      transition: .5s; }
+    .bg_three .rewievs .block_rewievs:hover .four_color {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      transition: 0.4s; }
+    .bg_three .rewievs .block_rewievs:hover .rewievs_text {
+      opacity: 1;
+      transition: .5s; }
+    .bg_three .rewievs .block_rewievs:hover .five_color {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      transition: 0.4s; }
+    .bg_three .rewievs .block_rewievs:hover .rewievs_text {
+      opacity: 1;
+      transition: .5s; }
+    .bg_three .rewievs .block_rewievs:hover .six_color {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      transition: 0.4s; }
+    .bg_three .rewievs .block_rewievs:hover .rewievs_text {
+      opacity: 1;
+      transition: .5s; }
+    .bg_three .rewievs .block_rewievs:hover .seven_color {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      transition: 0.4s; }
+    .bg_three .rewievs .block_rewievs:hover .rewievs_text {
+      opacity: 1;
+      transition: .5s; }
+    .bg_three .rewievs .block_rewievs:hover .eigth_color {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      transition: 0.4s; }
+    .bg_three .rewievs .block_rewievs:hover .rewievs_text {
+      opacity: 1;
+      transition: .5s; }
 
 /*# sourceMappingURL=main.css.map */
