@@ -13,16 +13,25 @@
     width: 100%;
   }
   @each $var in bg, bg_two {
-      
-  
-  .#{$var} {
-    flex: 1 0 auto;
+    .#{$var} {
     background: url('/img/#{$var}.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    }
+    .big_block {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+  
+  content {
+    flex: 0 0 auto;  
     width: 100%;
-    height: 650px;
+    height: 100%;
     position: relative;
 }
 }
@@ -146,6 +155,7 @@
       height: 250px;
       top: 90px;
       right: 50px;
+      z-index: 999;
 
       .nav_touch {
           
@@ -221,16 +231,18 @@
 .bg_three {
     flex: 1 0 auto;
     width: 100%;
-    height: 650px;
+    height: 100%;
 
 .rewievs {
     display: flex;
     justify-content: center;
-    // align-items: center;
+    flex-wrap: wrap;
     width: 100%;
+    height: 100%;
+
     .block_rewievs {
-        width: 340px;
-        height: 325px;
+        width: 25%;
+        height: 50%;
         position: relative;
     }
     .block_rewievs .rewievs_text {
