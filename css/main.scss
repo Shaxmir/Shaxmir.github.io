@@ -22,16 +22,12 @@
     .big_block {
         margin: 0;
         padding: 0;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
     }
   
   content {
     flex: 0 0 auto;  
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
 }
 }
@@ -96,6 +92,7 @@
           text-transform: uppercase;
           font-size: 12px;
           transition: 0.4s;
+          cursor: pointer;
       }
       .buy:hover {
           background: #e45028
