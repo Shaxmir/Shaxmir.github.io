@@ -238,12 +238,12 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 
     .block_rewievs {
-        width: 25%;
-        height: 50%;
+        width: 25vw;
+        height: 50vh;
         position: relative;
     }
     .block_rewievs .rewievs_text {
