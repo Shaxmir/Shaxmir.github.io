@@ -14,7 +14,7 @@
   }
   @each $var in bg, bg_two {
     .#{$var} {
-    background: url('./img/#{$var}.png');
+    background: url('../img/#{$var}.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,7 +32,7 @@
 }
 }
 .bg .test {
-    background: url("./img/texture.png");
+    background: url("../img/texture.png");
     width: 100%;
     height: 100%;
     position: absolute;
@@ -137,7 +137,7 @@
     }
     .start_drops::before {
         position: absolute;
-        content: url('./img/drops.png');
+        content: url('../img/drops.png');
         top: 60px;
         left: -40px;
     }
@@ -288,7 +288,7 @@
       }
       @each $num in one, two, three, four, five, six, seven, eigth {
           .#{$num} {
-              background-image:  url("./img/#{$num}.png");
+              background-image:  url("../img/#{$num}.png");
               background-size: cover;
               background-position: center;
               background-repeat: no-repeat;
