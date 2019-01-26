@@ -13,47 +13,39 @@ body {
   width: 100%; }
 
 .bg {
-  background: url("/img/bg.png");
+  background: url("./img/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
 
 .big_block {
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%; }
+  padding: 0; }
 
-content {
+.content {
   flex: 0 0 auto;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: relative; }
 
 .bg_two {
-  background: url("/img/bg_two.png");
+  background: url("./img/bg_two.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
 
 .big_block {
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%; }
+  padding: 0; }
 
-content {
+.content {
   flex: 0 0 auto;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: relative; }
 
 .bg .test {
-  background: url("/img/texture.png");
+  background: url("./img/texture.png");
   width: 100%;
   height: 100%;
   position: absolute; }
@@ -61,9 +53,14 @@ content {
 .footer {
   flex: 0 0 auto; }
 
-.first_block {
+.conteiner {
   width: 1100px;
   margin: 0 auto; }
+
+.first_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .header_block {
   display: flex;
@@ -105,7 +102,8 @@ content {
     align-items: center;
     text-transform: uppercase;
     font-size: 12px;
-    transition: 0.4s; }
+    transition: 0.4s;
+    cursor: pointer; }
   .header_block .buy:hover {
     background: #e45028; }
 
@@ -139,14 +137,15 @@ content {
     width: 500px; }
   .start_page .start_drops::before {
     position: absolute;
-    content: url("/img/drops.png");
+    content: url("./img/drops.png");
     top: 60px;
     left: -40px; }
 
 .scroll {
   display: flex;
   justify-content: center;
-  margin-top: 90px; }
+  margin-top: 90px;
+  position: relative; }
 
 .navigation {
   display: flex;
@@ -182,33 +181,30 @@ content {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
   color: #2f3234;
   font-family: "open";
   font-weight: bold;
   font-style: normal;
   font-size: 50px; }
 
-.conteiner {
-  width: 1100px;
-  margin: 0 auto;
+.conteiner_blocks {
   display: flex;
   justify-content: space-between;
   align-items: flex-start; }
-  .conteiner .conteiner_in {
+  .conteiner_blocks .conteiner_in {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 300px; }
-  .conteiner .title_present {
+  .conteiner_blocks .title_present {
     font-family: "open";
     font-weight: 100;
     font-style: normal;
     color: #2f3234;
     margin-top: 20px;
     text-align: center; }
-  .conteiner .text {
+  .conteiner_blocks .text {
     font-family: "open";
     font-weight: 300;
     font-style: normal;
@@ -268,7 +264,7 @@ content {
     .bg_three .rewievs .rewievs_link:hover {
       background: #2f3234; }
     .bg_three .rewievs .one {
-      background-image: url("/img/one.png");
+      background-image: url("./img/one.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -276,7 +272,7 @@ content {
       height: 100%;
       filter: grayscale(100%); }
     .bg_three .rewievs .two {
-      background-image: url("/img/two.png");
+      background-image: url("./img/two.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -284,7 +280,7 @@ content {
       height: 100%;
       filter: grayscale(100%); }
     .bg_three .rewievs .three {
-      background-image: url("/img/three.png");
+      background-image: url("./img/three.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -292,7 +288,7 @@ content {
       height: 100%;
       filter: grayscale(100%); }
     .bg_three .rewievs .four {
-      background-image: url("/img/four.png");
+      background-image: url("./img/four.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -300,7 +296,7 @@ content {
       height: 100%;
       filter: grayscale(100%); }
     .bg_three .rewievs .five {
-      background-image: url("/img/five.png");
+      background-image: url("./img/five.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -308,7 +304,7 @@ content {
       height: 100%;
       filter: grayscale(100%); }
     .bg_three .rewievs .six {
-      background-image: url("/img/six.png");
+      background-image: url("./img/six.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -316,7 +312,7 @@ content {
       height: 100%;
       filter: grayscale(100%); }
     .bg_three .rewievs .seven {
-      background-image: url("/img/seven.png");
+      background-image: url("./img/seven.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -324,7 +320,7 @@ content {
       height: 100%;
       filter: grayscale(100%); }
     .bg_three .rewievs .eigth {
-      background-image: url("/img/eigth.png");
+      background-image: url("./img/eigth.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
