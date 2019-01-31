@@ -16,7 +16,7 @@
     overflow: hidden;
     position: relative;
   }
-  @each $var in bg, bg_two,bg_team,bg_menu,bg_form {
+  @each $var in bg, bg_two,bg_team,bg_menu,bg_form,bg_map {
     .#{$var} {
     background: url('../img/#{$var}.png');
     background-size: cover;
@@ -529,9 +529,15 @@ span {
     display: flex;
     flex-direction: column;
     width: 100%;
+    .title {
+        margin-top: 100px;
+        color: #f9b43b;
+        font-size: 71px;
+    }
     .form {
         display: flex;
         width: 100%;
+        margin-top: 50px;
     }
     .block_one {
         flex: 1;
@@ -578,12 +584,12 @@ span {
     display: flex;
     padding: 10px;
     position: relative;
-    .input_radio {
+    
+}
+.input_radio {
     position: absolute;
     opacity: 0;
 }
-}
-
 .radio_content {
     display: flex;
 }
@@ -614,7 +620,65 @@ span {
     padding: 0 10px;
     color: #fff;
 }
+.mini_checkbox {
+    display: flex;
+    position: relative;
+}
+.checkbox__input {
+    position: absolute;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+}
+.checkbox__content {
+    display: flex;
+    padding: 10px;
+
+}
+.checkbox__text {
+    color: #fff;
+    padding: 0 10px;
+}
+.checkbox__btn {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    position: relative;
+    
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+}
+.buy_block {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.buy_in {
+    color: #fff;
+    text-decoration: none;
+}
+.del {
+    padding: 0 10px;
+    .del_in {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+}
+.checkbox__input:checked + .checkbox__content .checkbox__btn img {
+    opacity: 1;    
 }
 .input_radio:checked + .radio_content  .radio__btn:after {
     opacity: 1;    
 }
+// .vk-ico {
+//     width: 36px;
+//     height: 36px;
+//     fill: red;
+// }

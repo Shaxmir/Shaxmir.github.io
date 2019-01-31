@@ -196,6 +196,42 @@ body {
   height: 100vh;
   position: relative; }
 
+.bg_map {
+  background: url("../img/bg_map.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 650px; }
+
+.big_block {
+  margin: 0;
+  padding: 0; }
+
+.buy {
+  font-family: "open";
+  font-weight: 200;
+  font-style: normal;
+  background: #c1401e;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: 0.4s;
+  cursor: pointer; }
+
+.content {
+  flex: 0 0 auto;
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+
 .bg .test {
   background: url("../img/texture.png");
   width: 100%;
@@ -718,9 +754,14 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%; }
+  .block_form .title {
+    margin-top: 100px;
+    color: #f9b43b;
+    font-size: 71px; }
   .block_form .form {
     display: flex;
-    width: 100%; }
+    width: 100%;
+    margin-top: 50px; }
   .block_form .block_one {
     flex: 1;
     padding: 0 10px;
@@ -759,9 +800,9 @@ body {
     display: flex;
     padding: 10px;
     position: relative; }
-    .block_form .label .input_radio {
-      position: absolute;
-      opacity: 0; }
+  .block_form .input_radio {
+    position: absolute;
+    opacity: 0; }
   .block_form .radio_content {
     display: flex; }
   .block_form .radio__btn {
@@ -785,6 +826,46 @@ body {
   .block_form .radio__text {
     padding: 0 10px;
     color: #fff; }
+  .block_form .mini_checkbox {
+    display: flex;
+    position: relative; }
+  .block_form .checkbox__input {
+    position: absolute;
+    opacity: 0;
+    width: 16px;
+    height: 16px; }
+  .block_form .checkbox__content {
+    display: flex;
+    padding: 10px; }
+  .block_form .checkbox__text {
+    color: #fff;
+    padding: 0 10px; }
+  .block_form .checkbox__btn {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    position: relative; }
+    .block_form .checkbox__btn img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0; }
+  .block_form .buy_block {
+    display: flex;
+    align-items: center;
+    padding: 10px; }
+  .block_form .buy_in {
+    color: #fff;
+    text-decoration: none; }
+  .block_form .del {
+    padding: 0 10px; }
+    .block_form .del .del_in {
+      color: #fff;
+      text-decoration: none; }
+
+.checkbox__input:checked + .checkbox__content .checkbox__btn img {
+  opacity: 1; }
 
 .input_radio:checked + .radio_content .radio__btn:after {
   opacity: 1; }
