@@ -16,6 +16,9 @@
     overflow: hidden;
     position: relative;
   }
+  a {
+      text-decoration: none;
+  }
   @each $var in bg, bg_two,bg_team,bg_menu,bg_form,bg_map {
     .#{$var} {
     background: url('../img/#{$var}.png');
