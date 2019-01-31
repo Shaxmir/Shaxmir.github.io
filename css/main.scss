@@ -16,9 +16,6 @@
     overflow: hidden;
     position: relative;
   }
-  a {
-      text-decoration: none;
-  }
   @each $var in bg, bg_two,bg_team,bg_menu,bg_form,bg_map {
     .#{$var} {
     background: url('../img/#{$var}.png');
@@ -171,12 +168,13 @@
       top: 90px;
       right: 50px;
       z-index: 999;
+      list-style: none;
 
       .nav_touch {
           
           position: relative;
       }
-      .nav_touch:nth-child(1) {
+      .activ_nav {
           width: 18px;
           height: 18px;
           border: 1px solid #fff;
@@ -351,8 +349,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        margin-top: 50%;
-        transform: translate(0, -40%);
+        padding: 10%;
     }
     .accordion_in {
         display: flex;
@@ -362,7 +359,6 @@
     .title {
         color: #f9b43b;
         font-size: 70px;
-        transform: translate(0, -50%);
     }
     .accordion_list {
         display: flex;
@@ -551,6 +547,7 @@ span {
         display: flex;
         // justify-content: space-between;
     }
+   
     .input_form {
         width: 100%;
     border-width: 1px;
@@ -559,7 +556,12 @@ span {
     border-radius: 5px;
     background-color: #fff;
     padding: 10px;
-    font-size: 14px
+    font-size: 14px;
+    outline: none;
+    transition: 0.4s;
+    &:hover {
+        border: 1px #f9b43b solid;
+    }
     }
     .mini_block {
         flex: 1;
@@ -582,11 +584,18 @@ span {
     padding: 10px;
     font-size: 14px;
     resize: none;
+    outline: none;
+    transition: 0.4s;
+    &:hover {
+        border: 2px #f9b43b solid;
+    }
 }
 .label {
     display: flex;
     padding: 10px;
     position: relative;
+    font-family: "open";
+    font-weight: 300;
     
 }
 .input_radio {
@@ -626,6 +635,8 @@ span {
 .mini_checkbox {
     display: flex;
     position: relative;
+    font-family: "open";
+    font-weight: 300;
 }
 .checkbox__input {
     position: absolute;
@@ -668,6 +679,8 @@ img {
 }
 .del {
     padding: 0 10px;
+    font-family: "open";
+    font-weight: 300;
     .del_in {
         color: #fff;
         text-decoration: none;
@@ -691,7 +704,7 @@ img {
     height: 70px;
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0;
     .footer_in {
         display: flex;
         justify-content: space-between;
@@ -716,13 +729,21 @@ img {
         color: #e45028;
     }
     .soc-ico {
-        width: 36px;
-        height: 36px;
+        width: 20px;
+        height: 20px;
         fill: #585858;
         margin-right: 20px;
+        transition: 0.4s;
         &:hover {
             fill: #fff;
         }
     }
+    .phone_link, .soc_link {
+        text-decoration: none;
+    }
+    .phone_link {
+        color: #e45028;
+    }
+
     
 }
