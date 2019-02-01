@@ -26,7 +26,8 @@
     width: 100vw;
     height: 100vh;
     min-height: 650px;
-    
+    display: flex;
+    align-items: center;
     }
     .big_block {
         margin: 0;
@@ -222,7 +223,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 300px;
+        width: 33.33%;
     }
     .title_present {
         font-family: "open";
