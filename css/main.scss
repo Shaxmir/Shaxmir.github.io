@@ -26,6 +26,7 @@
     width: 100vw;
     height: 100vh;
     min-height: 650px;
+    
     }
     .big_block {
         margin: 0;
@@ -65,7 +66,7 @@
     flex: 0 0 auto;
   }
   .conteiner {
-    width: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
       
   }
@@ -171,8 +172,12 @@
       list-style: none;
 
       .nav_touch {
-          
-          position: relative;
+        width: 18px;
+        height: 18px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        margin-left: 6px;
+        position: relative;
       }
       .activ_nav {
           width: 18px;
@@ -349,7 +354,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        padding: 10%;
+        padding: 100px;
     }
     .accordion_in {
         display: flex;
@@ -369,27 +374,6 @@
         transform: translate(-40%,0);
 
     }
-    .accordion_item {
-        display: flex;
-        flex-direction: column;
-        margin-top: 40px;
-        width: 360px;
-        position: relative;
-        &:hover  .accordion_info{
-            max-height:  110px;
-        }
-    }
-    .active .accordion_info{
-        max-height: 110px;
-    }
-    .accordion_link {
-        font-family: "open";
-        font-weight: bold;
-        font-size: 14px;
-        font-style: normal;
-        color: #fff;
-        text-decoration: none;
-    }
     .scrolls_ico::before {
         content: "";
         background: url("../img/ico/down.png");
@@ -400,6 +384,46 @@
         top: 5px;
         left: -15px;
     }
+    .accordion_item {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        width: 360px;
+        position: relative;
+        &:hover  .accordion_info{
+            max-height:  110px;
+        }
+        &:hover  .scrolls_ico::before {
+            background: url("../img/ico/up.png");
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: 5px;
+            left: -15px;
+        }
+    }
+    .active .accordion_info{
+        max-height: 110px;
+    }
+    .active .scrolls_ico::before {
+        background: url("../img/ico/up.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 5px;
+        left: -15px;
+    }
+    .accordion_link {
+        font-family: "open";
+        font-weight: bold;
+        font-size: 14px;
+        font-style: normal;
+        color: #fff;
+        text-decoration: none;
+    }
+    
 
     .accordion_info {
         display: flex;
@@ -408,10 +432,15 @@
         max-height: 0;
         overflow: hidden;
         transition: 0.4s;
-        img {
+        .accord_img {
+            overflow: hidden;
             border-radius: 50%;
             width: 100px;
             height: 100px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
 
         }   
              .text {
@@ -465,8 +494,12 @@
     cursor: pointer;
     
     &:hover .accord_text{
-        max-width: 700px;
+        max-width: 700px;   
     }
+    &:hover .accord_link span{
+        color: #f9b43b;
+    }
+    
     .dark {
         background-color: rgba(0, 0, 0, 0.7);
         height: 100%;
@@ -476,6 +509,9 @@
 .active {
     .accord_text{
         max-width: 700px;
+    }
+    .accord_link span{
+        color: #f9b43b;
     }
 }
 .accord_link {
@@ -489,7 +525,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    
 span {
     display: block;
     position: absolute;
@@ -503,6 +539,8 @@ span {
     font-size: 40px;
     white-space: nowrap;
     transform-origin: 0 0;
+    
+
     }
     
 }
@@ -528,6 +566,8 @@ span {
     display: flex;
     flex-direction: column;
     width: 100%;
+    font-family: "open";
+    font-weight: 300;
     .title {
         margin-top: 100px;
         color: #f9b43b;
@@ -676,6 +716,20 @@ img {
 .buy_in {
     color: #fff;
     text-decoration: none;
+    background: #c1401e;
+    border: none;
+    text-transform: uppercase;
+    font-family: "open";
+    font-weight: 200;
+          width: 100px;
+          height: 35px;
+          border-radius: 5px;
+          font-size: 12px;
+          transition: 0.4s;
+          cursor: pointer;
+          &:hover {
+            background: #e45028;
+          }
 }
 .del {
     padding: 0 10px;
@@ -684,6 +738,9 @@ img {
     .del_in {
         color: #fff;
         text-decoration: none;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 }
 }
