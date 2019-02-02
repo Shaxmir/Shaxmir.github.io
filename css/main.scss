@@ -1,16 +1,23 @@
+
+/////
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+ 
   html,
   body {
     height: 100%;
+    font-size: 16px;
+    @include tab() {
+        font-size: 14px;
+    }
   }
   .wrapper {
     display: flex;
     flex-direction: column;
-    min-width: 1100px;
+    // max-width: 1100px;
   min-height: 100%;
     width: 100%;
     overflow: hidden;
@@ -26,13 +33,22 @@
     width: 100vw;
     height: 100vh;
     min-height: 650px;
-    display: flex;
-    align-items: center;
+
     }
     .big_block {
         margin: 0;
         padding: 0;
     }
+    @include tab() {
+        .buy_bur {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 150px;
+            align-items: center;
+          }
+    }
+    
     .buy {
         font-family: "open";
         font-weight: 200;
@@ -69,6 +85,7 @@
   .conteiner {
     max-width: 1100px;
     margin: 0 auto;
+    width: 95%;
       
   }
   .first_block {
@@ -79,23 +96,27 @@
   }
   .header_block {
       display: flex;
-      width: 1100px;
+      max-width: 1100px;
+      width: 95%;
       margin: 0 auto;
       justify-content: space-between;
       align-items: center;
       position: relative;
       .menu {
-          width: 670px;
+          width: 65%;
           font-family: "open";
           font-weight: 200;
           font-style: normal;
+          @include tab() {
+            display: none;
+      }
       }
       ul {
           display: flex;
           justify-content: space-between;
           align-items: center;
           text-transform: uppercase;
-          font-size: 12px;
+          font-size: rem(12px);
           list-style: disc;
           color: #fff;
       }
@@ -119,11 +140,21 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @include tab() {
+          flex-direction: column;
+          align-items: center;
+      }
       .start_text {
         display: flex;
-        width: 500px;
+        width: 50%;
         flex-direction: column;
         justify-content: center;
+        @include tab() {
+            margin-top: 20px;
+            width: 100%;
+            align-items: center;
+        
+      }
       }
       
       @mixin text($size, $color,$fontw, $fonts) {
@@ -138,20 +169,29 @@
 
       .start_text .text_one{      
           @include text(80px, #f9b43b, bold, normal);
+          @include tab() {
+              font-size: 60px;
+        }
       }
       .start_text  .text_two{      
         @include text(55px, #fff, 100, normal);
+        @include tab() {
+            font-size: 40px;
+            flex-wrap: wrap;
+            width: 50%;
+            text-align: center;
+      }
     }
     .start_burger{
         position: relative;
-        width: 500px;
+        width: 50%;
+        padding: 0 15px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
-    .start_drops::before {
-        position: absolute;
-        content: url('../img/drops.png');
-        top: 60px;
-        left: -40px;
-    }
+    
   }
   .scroll {
       display: flex;
@@ -171,6 +211,9 @@
       right: 50px;
       z-index: 999;
       list-style: none;
+      @include tab() {
+          display: none;
+    }
 
       .nav_touch {
         width: 18px;
@@ -213,6 +256,9 @@
     font-weight: bold;
     font-style: normal;
     font-size: 50px;
+    @include tab() {
+        font-size: 30px;
+    }
 }
 .conteiner_blocks {
     display: flex;
@@ -224,6 +270,7 @@
         justify-content: center;
         align-items: center;
         width: 33.33%;
+        padding: 10px;
     }
     .title_present {
         font-family: "open";
@@ -232,6 +279,9 @@
         color: #2f3234;
         margin-top: 20px;
         text-align: center;
+        @include tab() {
+            font-size: 18px;
+        }
     }
     .text {
         font-family: "open";
@@ -256,11 +306,18 @@
     flex-wrap: wrap;
     width: 100vw;
     height: 100vh;
+    @include tab() {
+        height: 100%;    
+    }
 
     .block_rewievs {
         width: 25vw;
         height: 50vh;
         position: relative;
+        @include tab() {
+            width: 50vw;
+
+        }
     }
     .block_rewievs .rewievs_text {
           position: absolute;
@@ -281,7 +338,7 @@
           }
           .text {
             margin-bottom: 25px;
-            width: 200px;
+            width: 70%;
             font-family: "open";
           font-weight: 300;
           font-style: normal;
@@ -349,6 +406,9 @@
     top: 0;
     right: 0;
     height: 100%;
+    @include tab() {
+        width: 100%;
+    }
     .accordion {
         height: 100%;
         width: 100%;
@@ -356,6 +416,9 @@
         flex-direction: column;
         position: relative;
         padding: 100px;
+        @include tab() {
+            padding: 60px 0px;
+        }
     }
     .accordion_in {
         display: flex;
@@ -389,25 +452,20 @@
         display: flex;
         flex-direction: column;
         margin-top: 40px;
-        width: 360px;
+        width: 100%;
         position: relative;
+        @include tab() {
+            margin-left: 25%;
+        }
         &:hover  .accordion_info{
             max-height:  110px;
+            @include tab() {
+                max-height: 200px;
+            }
         }
-        &:hover  .scrolls_ico::before {
-            background: url("../img/ico/up.png");
-            background-repeat: no-repeat;
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            top: 5px;
-            left: -15px;
-        }
+        
     }
-    .active .accordion_info{
-        max-height: 110px;
-    }
-    .active .scrolls_ico::before {
+    .accordion_item:hover  .scrolls_ico::before {
         background: url("../img/ico/up.png");
         background-repeat: no-repeat;
         position: absolute;
@@ -416,6 +474,21 @@
         top: 5px;
         left: -15px;
     }
+    // .active .accordion_info{
+    //     max-height: 110px;
+    //     @include tab() {
+    //         max-height: 200px;
+    //     }
+    // }
+    // .active .scrolls_ico::before {
+    //     background: url("../img/ico/up.png");
+    //     background-repeat: no-repeat;
+    //     position: absolute;
+    //     width: 15px;
+    //     height: 15px;
+    //     top: 5px;
+    //     left: -15px;
+    // }
     .accordion_link {
         font-family: "open";
         font-weight: bold;
@@ -433,6 +506,11 @@
         max-height: 0;
         overflow: hidden;
         transition: 0.4s;
+        @include tab() {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
         .accord_img {
             overflow: hidden;
             border-radius: 50%;
@@ -445,13 +523,17 @@
 
         }   
              .text {
-            width: 230px;
+            width: 100%;
+            margin-left: 10px;
             display: flex;
             flex-direction: column;
             padding: 5px;
             font-family: "open";
             font-weight: 300;
             color: #fff;
+            @include tab() {
+                text-align: center;
+            }
 
             h4 {
                 font-weight: 200;
@@ -526,6 +608,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    @include tab() {
+        width: 50px;   
+    }
     
 span {
     display: block;
@@ -540,6 +625,9 @@ span {
     font-size: 40px;
     white-space: nowrap;
     transform-origin: 0 0;
+    @include tab() {
+        font-size: 20px   
+    }
     
 
     }
@@ -573,11 +661,18 @@ span {
         margin-top: 100px;
         color: #f9b43b;
         font-size: 71px;
+        @include tab() {
+            font-size: 50px;
+            margin-top: 50px;
+      }
     }
     .form {
         display: flex;
         width: 100%;
         margin-top: 50px;
+        @include tab() {
+            flex-direction: column;
+      }
     }
     .block_one {
         flex: 1;
@@ -767,8 +862,9 @@ img {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 1100px;
+        max-width: 1100px;
         margin: 0 auto;
+        width: 95%;
     }
     .phone-ico {
         width: 14px;

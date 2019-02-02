@@ -1,23 +1,20 @@
 /*
 Error: Undefined mixin 'tab'.
-        on line 13 of C:\OSPanel\domains\test.ru\css\main.scss, in `tab'
-        from line 13 of C:\OSPanel\domains\test.ru\css\main.scss
+        on line 3 of C:\OSPanel\domains\test.ru\css\burico.scss, in `tab'
+        from line 3 of C:\OSPanel\domains\test.ru\css\burico.scss
 
-8:  
-9:   html,
-10:   body {
-11:     height: 100%;
-12:     font-size: 16px;
-13:     @include tab() {
-14:         font-size: 14px;
-15:     }
-16:   }
-17:   .wrapper {
-18:     display: flex;
+1: .burger_span {
+2:     display: none; 
+3:     @include tab() {
+4:         display: block;
+5:     }
+6: }
+7: .burger_ico {
+8:     // display: none;
 
 Backtrace:
-C:\OSPanel\domains\test.ru\css\main.scss:13:in `tab'
-C:\OSPanel\domains\test.ru\css\main.scss:13
+C:\OSPanel\domains\test.ru\css\burico.scss:3:in `tab'
+C:\OSPanel\domains\test.ru\css\burico.scss:3
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
@@ -66,4 +63,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tab'.\A         on line 13 of C:\OSPanel\domains\test.ru\css\main.scss, in `tab'\A         from line 13 of C:\OSPanel\domains\test.ru\css\main.scss\A \A 8:  \A 9:   html,\A 10:   body {\A 11:     height: 100%;\A 12:     font-size: 16px;\A 13:     @include tab() {\A 14:         font-size: 14px;\A 15:     }\A 16:   }\A 17:   .wrapper {\A 18:     display: flex;"; }
+  content: "Error: Undefined mixin 'tab'.\A         on line 3 of C:\OSPanel\domains\test.ru\css\burico.scss, in `tab'\A         from line 3 of C:\OSPanel\domains\test.ru\css\burico.scss\A \A 1: .burger_span {\A 2:     display: none; \A 3:     @include tab() {\A 4:         display: block;\A 5:     }\A 6: }\A 7: .burger_ico {\A 8:     // display: none;"; }
