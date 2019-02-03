@@ -7,13 +7,13 @@ Error: Undefined mixin 'tab'.
 9:   html,
 10:   body {
 11:     height: 100%;
-12:     font-size: 16px;
+12:     font-size: rem(16px);
 13:     @include tab() {
-14:         font-size: 14px;
+14:         font-size: rem(14px);
 15:     }
-16:   }
-17:   .wrapper {
-18:     display: flex;
+16:     @include phone() {
+17:         font-size: rem(12px);
+18:     }
 
 Backtrace:
 C:\OSPanel\domains\test.ru\css\main.scss:13:in `tab'
@@ -66,4 +66,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tab'.\A         on line 13 of C:\OSPanel\domains\test.ru\css\main.scss, in `tab'\A         from line 13 of C:\OSPanel\domains\test.ru\css\main.scss\A \A 8:  \A 9:   html,\A 10:   body {\A 11:     height: 100%;\A 12:     font-size: 16px;\A 13:     @include tab() {\A 14:         font-size: 14px;\A 15:     }\A 16:   }\A 17:   .wrapper {\A 18:     display: flex;"; }
+  content: "Error: Undefined mixin 'tab'.\A         on line 13 of C:\OSPanel\domains\test.ru\css\main.scss, in `tab'\A         from line 13 of C:\OSPanel\domains\test.ru\css\main.scss\A \A 8:  \A 9:   html,\A 10:   body {\A 11:     height: 100%;\A 12:     font-size: rem(16px);\A 13:     @include tab() {\A 14:         font-size: rem(14px);\A 15:     }\A 16:     @include phone() {\A 17:         font-size: rem(12px);\A 18:     }"; }

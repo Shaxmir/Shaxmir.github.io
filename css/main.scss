@@ -9,15 +9,18 @@
   html,
   body {
     height: 100%;
-    font-size: 16px;
+    font-size: rem(16px);
     @include tab() {
-        font-size: 14px;
+        font-size: rem(14px);
+    }
+    @include phone() {
+        font-size: rem(12px);
     }
   }
   .wrapper {
     display: flex;
     flex-direction: column;
-    // max-width: 1100px;
+    // max-width: rem(1100px);
   min-height: 100%;
     width: 100%;
     overflow: hidden;
@@ -32,7 +35,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    min-height: 650px;
+    min-height: rem(650px);
 
     }
     .big_block {
@@ -44,7 +47,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 150px;
+            max-width: rem(170px);
             align-items: center;
           }
     }
@@ -54,14 +57,14 @@
         font-weight: 200;
         font-style: normal;
           background: #c1401e;
-          width: 100px;
-          height: 35px;
-          border-radius: 5px;
+          width: rem(100px);
+          height: rem(35px);
+          border-radius: rem(5px);
           display: flex;
           justify-content: center;
           align-items: center;
           text-transform: uppercase;
-          font-size: 12px;
+          font-size: rem(12px);
           transition: 0.4s;
           cursor: pointer;
       }
@@ -83,7 +86,7 @@
     flex: 0 0 auto;
   }
   .conteiner {
-    max-width: 1100px;
+    max-width: rem(1100px);
     margin: 0 auto;
     width: 95%;
       
@@ -96,7 +99,7 @@
   }
   .header_block {
       display: flex;
-      max-width: 1100px;
+      max-width: rem(1100px);
       width: 95%;
       margin: 0 auto;
       justify-content: space-between;
@@ -110,6 +113,9 @@
           @include tab() {
             display: none;
       }
+      @include phone() {
+        display: none;
+  }
       }
       ul {
           display: flex;
@@ -128,7 +134,7 @@
           color: #fff;
       }
       .logo img{
-          padding: 10px;
+          padding: rem(10px);
       }
       
       .buy:hover {
@@ -144,13 +150,14 @@
           flex-direction: column;
           align-items: center;
       }
+
       .start_text {
         display: flex;
         width: 50%;
         flex-direction: column;
         justify-content: center;
         @include tab() {
-            margin-top: 20px;
+            margin-top: rem(20px);
             width: 100%;
             align-items: center;
         
@@ -168,24 +175,33 @@
       } 
 
       .start_text .text_one{      
-          @include text(80px, #f9b43b, bold, normal);
+          @include text(rem(80px), #f9b43b, bold, normal);
           @include tab() {
-              font-size: 60px;
+              font-size: rem(60px);
         }
+        @include phone() {
+            font-size: rem(40px);
+      }
       }
       .start_text  .text_two{      
-        @include text(55px, #fff, 100, normal);
+        @include text(rem(55px), #fff, 100, normal);
         @include tab() {
-            font-size: 40px;
+            font-size: rem(40px);
             flex-wrap: wrap;
             width: 50%;
             text-align: center;
       }
+      @include phone() {
+        font-size: rem(30px);
+        flex-wrap: wrap;
+        width: 50%;
+        text-align: center;
+  }
     }
     .start_burger{
         position: relative;
         width: 50%;
-        padding: 0 15px;
+        padding: 0 rem(15px);
         img {
             width: 100%;
             height: 100%;
@@ -196,7 +212,7 @@
   .scroll {
       display: flex;
       justify-content: center;
-      margin-top: 90px;
+      margin-top: rem(90px);
       position: relative;
   }
   .navigation {
@@ -205,38 +221,41 @@
       align-items: center;
       justify-content: space-between;
       position: fixed;
-      width: 30px;
-      height: 250px;
-      top: 90px;
-      right: 50px;
+      width: rem(30px);
+      height: rem(250px);
+      top: rem(90px);
+      right: rem(50px);
       z-index: 999;
       list-style: none;
       @include tab() {
           display: none;
     }
+    @include phone() {
+        display: none;
+  }
 
       .nav_touch {
-        width: 18px;
-        height: 18px;
-        border: 1px solid rgba(0, 0, 0, 0);
+        width: rem(18px);
+        height: rem(18px);
+        border: rem(1px) solid rgba(0, 0, 0, 0);
         border-radius: 50%;
-        margin-left: 6px;
+        margin-left: rem(6px);
         position: relative;
       }
       .activ_nav {
-          width: 18px;
-          height: 18px;
-          border: 1px solid #fff;
+          width: rem(18px);
+          height: rem(18px);
+          border: rem(1px) solid #fff;
           border-radius: 50%;
-          margin-left: 6px;
+          margin-left: rem(6px);
       }
      
       .nav_link::before {
         content: "";
         background: #fff;
         border-radius: 50%;
-        width: 6px;
-        height: 6px;
+        width: rem(6px);
+        height: rem(6px);
         display: block;
         top: 32%;
         left: 32%;
@@ -255,32 +274,62 @@
     font-family: "open";
     font-weight: bold;
     font-style: normal;
-    font-size: 50px;
+    font-size: rem(50px);
     @include tab() {
-        font-size: 30px;
+        font-size: rem(30px);
+    }
+    @include phone() {
+        font-size: rem(24px);
     }
 }
 .conteiner_blocks {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @include phone() {
+        flex-direction: column;
+    }
+    .conteiner_img {
+        width: rem(75px);
+        height: rem(75px);
+        display: inline-block;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
     .conteiner_in {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 33.33%;
-        padding: 10px;
+        padding: rem(10px);
+        @include phone() {
+        justify-content: flex-start;
+        flex-direction: row;
+        width: 100%;
+        }
+    }
+    .conteiner_present {
+        @include phone() {
+            flex-direction: column;
+            margin-left: rem(10px);
+        }
     }
     .title_present {
         font-family: "open";
         font-weight: 100;
         font-style: normal;
         color: #2f3234;
-        margin-top: 20px;
+        margin-top: rem(20px);
         text-align: center;
         @include tab() {
-            font-size: 18px;
+            font-size: rem(18px);
+        }
+        @include phone() {
+            font-size: rem(16px);
+            text-align: left;
         }
     }
     .text {
@@ -288,10 +337,14 @@
         font-weight: 300;
         font-style: normal;
         color: #2f3234;
-        margin-top: 20px;
+        margin-top: rem(20px);
         text-align: center;
-        line-height: 30px;
-        letter-spacing: 1px;
+        line-height: rem(30px);
+        letter-spacing: rem(1px);
+        @include phone() {
+            width: rem(350px);
+            text-align: left;
+        }
 }
 }
 //bg_three
@@ -318,11 +371,14 @@
             width: 50vw;
 
         }
+        @include phone() {
+         height: 30vw;
+        }
     }
     .block_rewievs .rewievs_text {
           position: absolute;
-          top: 25px;
-          left: 25px;
+          top: rem(25px);
+          left: rem(25px);
           color: #fff;
           display: flex;
           flex-direction: column;
@@ -330,27 +386,30 @@
           align-items: flex-start;
           opacity: 0;
           .title_rew {
-              font-size: 20px;
+              font-size: rem(20px);
               font-family: "open";
     font-weight: bold;
     font-style: normal;
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
           }
           .text {
-            margin-bottom: 25px;
+            margin-bottom: rem(25px);
             width: 70%;
             font-family: "open";
           font-weight: 300;
           font-style: normal;
+          @include phone() {
+         display: none;
+        }
           }
       }
       .rewievs_link {
           color: #fff;
           text-decoration: none;
           background: #1f2122;
-          padding: 10px 18px;
+          padding: rem(10px) rem(18px);
           text-transform: uppercase;
-          border-radius: 5px;
+          border-radius: rem(5px);
           font-family: "open";
           font-weight: 200;
           font-style: normal;
@@ -415,9 +474,9 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        padding: 100px;
+        padding: rem(100px);
         @include tab() {
-            padding: 60px 0px;
+            padding: rem(60px) rem(0px);
         }
     }
     .accordion_in {
@@ -430,11 +489,11 @@
     }
     .title {
         color: #f9b43b;
-        font-size: 70px;
+        font-size: rem(70px);
         justify-content: flex-start;
         @include tab() {
             justify-content: center;
-            font-size: 50px;
+            font-size: rem(50px);
         }
     }
     .accordion_list {
@@ -459,15 +518,15 @@
         background: url("../img/ico/down.png");
         background-repeat: no-repeat;
         position: absolute;
-        width: 15px;
-        height: 15px;
-        top: 5px;
-        left: -15px;
+        width: rem(15px);
+        height: rem(15px);
+        top: rem(5px);
+        left: rem(-15px);
     }
     .accordion_item {
         display: flex;
         flex-direction: column;
-        margin-top: 40px;
+        margin-top: rem(40px);
         width: 100%;
         position: relative;
         &:hover .accordion_link{
@@ -477,9 +536,9 @@
             align-items: center;
         }
         &:hover  .accordion_info{
-            max-height:  110px;
+            max-height:  rem(110px);
             @include tab() {
-                max-height: 200px;
+                max-height: rem(200px);
             }
         }
         
@@ -488,25 +547,25 @@
         background: url("../img/ico/up.png");
         background-repeat: no-repeat;
         position: absolute;
-        width: 15px;
-        height: 15px;
-        top: 5px;
-        left: -15px;
+        width: rem(15px);
+        height: rem(15px);
+        top: rem(5px);
+        left: rem(-15px);
     }
     .active .accordion_info{
-        max-height: 110px;
+        max-height: rem(110px);
         @include tab() {
-            max-height: 200px;
+            max-height: rem(200px);
         }
     }
     .active .scrolls_ico::before {
         background: url("../img/ico/up.png");
         background-repeat: no-repeat;
         position: absolute;
-        width: 15px;
-        height: 15px;
-        top: 5px;
-        left: -15px;
+        width: rem(15px);
+        height: rem(15px);
+        top: rem(5px);
+        left: rem(-15px);
        
     }
     .active .accordion_link {
@@ -515,7 +574,7 @@
     .accordion_link {
         font-family: "open";
         font-weight: bold;
-        font-size: 14px;
+        font-size: rem(14px);
         font-style: normal;
         color: #fff;
         text-decoration: none;
@@ -525,7 +584,7 @@
     .accordion_info {
         display: flex;
         justify-content: space-between;
-        margin-top: 10px;
+        margin-top: rem(10px);
         max-height: 0;
         overflow: hidden;
         transition: 0.4s;
@@ -538,8 +597,8 @@
         .accord_img {
             overflow: hidden;
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            width: rem(100px);
+            height: rem(100px);
             flex: 1 0 auto;
             img {
                 width: 100%;
@@ -549,10 +608,10 @@
         }   
              .text {
             width: 100%;
-            margin-left: 10px;
+            margin-left: rem(10px);
             display: flex;
             flex-direction: column;
-            padding: 5px;
+            padding: rem(5px);
             font-family: "open";
             font-weight: 300;
             color: #fff;
@@ -562,7 +621,7 @@
 
             h4 {
                 font-weight: 200;
-                margin-bottom: 15px;
+                margin-bottom: rem(15px);
             }
         }
     }
@@ -576,7 +635,7 @@
     height: 100%;
     .title {
         color: #fff;
-        font-size: 72px;
+        font-size: rem(72px);
         position: absolute;
         top: 10%;
         left: 10%;
@@ -602,7 +661,13 @@
     cursor: pointer;
     
     &:hover .accord_text{
-        max-width: 700px;   
+        max-width: rem(700px);  
+        @include tab(){
+            max-width: rem(400px);
+        } 
+        @include phone(){
+            max-width: rem(300px);
+        } 
     }
     &:hover .accord_link span{
         color: #f9b43b;
@@ -616,7 +681,13 @@
 }
 .active {
     .accord_text{
-        max-width: 700px;
+        max-width: rem(700px);
+        @include tab(){
+            max-width: rem(400px);
+        } 
+        @include tab(){
+            max-width: 0;
+        } 
     }
     .accord_link span{
         color: #f9b43b;
@@ -624,7 +695,7 @@
 }
 .accord_link {
     height: 100%;
-    width: 80px;
+    width: rem(80px);
     color: #fff;
     text-decoration: none;
     display: block;
@@ -634,7 +705,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     @include tab() {
-        width: 50px;   
+        width: rem(50px);   
+    }
+    @include phone() {
+        width: rem(40px);   
     }
     
 span {
@@ -642,16 +716,19 @@ span {
     position: absolute;
     top: 100%;
     left: 50%;
-    margin-top: -20px;
+    margin-top: rem(-20px);
     transform: rotate(-90deg) translateY(-50%);
     color: #fff;
     font-family: 'open';
     font-weight: bold;
-    font-size: 40px;
+    font-size: rem(40px);
     white-space: nowrap;
     transform-origin: 0 0;
     @include tab() {
-        font-size: 20px   
+        font-size: rem(20px)   
+    }
+    @include phone() {
+        font-size: rem(16px)   
     }
     
 
@@ -663,15 +740,21 @@ span {
     transition: 0.4s;
     font-family: 'open';
     font-weight: 400;
-    line-height: 30px;
+    line-height: rem(30px);
     overflow: hidden;
     color: #fff;
     span {
 
-    
     display: inline-block;
-    padding: 35px;
-    width: 600px;
+    padding: rem(35px);
+    width: rem(600px);
+    @include tab(){
+        max-width: rem(400px);
+    } 
+    @include phone(){
+        max-width: rem(300px);
+        font-size: rem(12px);
+    } 
     }
 }
 }
@@ -683,77 +766,86 @@ span {
     font-family: "open";
     font-weight: 300;
     .title {
-        margin-top: 100px;
+        margin-top: rem(100px);
         color: #f9b43b;
-        font-size: 71px;
+        font-size: rem(71px);
         @include tab() {
-            font-size: 50px;
-            margin-top: 50px;
+            font-size: rem(50px);
+            margin-top: rem(50px);
       }
+      @include phone() {
+        font-size: rem(30px);
+        margin-top: rem(25px);
+  }
     }
     .form {
         display: flex;
         width: 100%;
-        margin-top: 50px;
+        margin-top: rem(50px);
         @include tab() {
             flex-direction: column;
       }
     }
     .block_one {
         flex: 1;
-    padding: 0 10px;
+    padding: 0 rem(10px);
         flex: 1;
     }
     .form_block {
         display: flex;
         // justify-content: space-between;
+        &_phone {
+            @include phone() {
+                justify-content: center;
+          }
+        }
     }
    
     .input_form {
         width: 100%;
-    border-width: 1px;
+    border-width: rem(1px);
     border-color: #d1cfcb;
     border-style: solid;
-    border-radius: 5px;
+    border-radius: rem(5px);
     background-color: #fff;
-    padding: 10px;
-    font-size: 14px;
+    padding: rem(10px);
+    font-size: rem(14px);
     outline: none;
     transition: 0.4s;
     &:hover {
-        border: 1px #f9b43b solid;
+        border: rem(1px) #f9b43b solid;
     }
     }
     .mini_block {
         flex: 1;
-    padding: 0 10px;
+    padding: 0 rem(10px);
 }
 .block_text{
-    padding: 10px 0;
+    padding: rem(10px) 0;
     color: #fff;
     font-family: "open";
     font-weight: 300;
 }
 .textarea {
     width: 100%;
-    height: 110px;
-    border-width: 1px;
+    height: rem(110px);
+    border-width: rem(1px);
     border-color: #d1cfcb;
     border-style: solid;
-    border-radius: 5px;
+    border-radius: rem(5px);
     background-color: #fff;
-    padding: 10px;
-    font-size: 14px;
+    padding: rem(10px);
+    font-size: rem(14px);
     resize: none;
     outline: none;
     transition: 0.4s;
     &:hover {
-        border: 2px #f9b43b solid;
+        border: rem(2px) #f9b43b solid;
     }
 }
 .label {
     display: flex;
-    padding: 10px;
+    padding: rem(10px);
     position: relative;
     font-family: "open";
     font-weight: 300;
@@ -768,16 +860,16 @@ span {
 }
 
 .radio__btn {
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
     background: #fff;
     border-radius: 50%;
     position: relative;
 
     &::after {
         content: "";
-        width: 8px;
-        height: 8px;
+        width: rem(8px);
+        height: rem(8px);
         border-radius: 50%;
         background: #c1401e;
         position: absolute;
@@ -790,7 +882,7 @@ span {
  
 }
 .radio__text {
-    padding: 0 10px;
+    padding: 0 rem(10px);
     color: #fff;
 }
 .mini_checkbox {
@@ -802,21 +894,21 @@ span {
 .checkbox__input {
     position: absolute;
     opacity: 0;
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
 }
 .checkbox__content {
     display: flex;
-    padding: 10px;
+    padding: rem(10px);
 
 }
 .checkbox__text {
     color: #fff;
-    padding: 0 10px;
+    padding: 0 rem(10px);
 }
 .checkbox__btn {
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
     background: #fff;
     position: relative;
     
@@ -832,7 +924,7 @@ img {
 .buy_block {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: rem(10px);
 }
 .buy_in {
     color: #fff;
@@ -842,10 +934,10 @@ img {
     text-transform: uppercase;
     font-family: "open";
     font-weight: 200;
-          width: 100px;
-          height: 35px;
-          border-radius: 5px;
-          font-size: 12px;
+          width: rem(100px);
+          height: rem(35px);
+          border-radius: rem(5px);
+          font-size: rem(12px);
           transition: 0.4s;
           cursor: pointer;
           &:hover {
@@ -853,7 +945,7 @@ img {
           }
 }
 .del {
-    padding: 0 10px;
+    padding: 0 rem(10px);
     font-family: "open";
     font-weight: 300;
     .del_in {
@@ -879,21 +971,28 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 70px;
+    height: rem(70px);
     position: absolute;
     bottom: 0;
     left: 0;
+    @include phone() {
+        height: rem(100px);
+  }
     .footer_in {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1100px;
+        max-width: rem(1100px);
         margin: 0 auto;
         width: 95%;
+        @include phone() {
+            flex-direction: column;
+            justify-content: space-around;
+      }
     }
     .phone-ico {
-        width: 14px;
-        height: 14px;
+        width: rem(14px);
+        height: rem(14px);
         fill: #e45028;
     }
     .left_block {
@@ -902,16 +1001,19 @@ img {
         color: #fff;
         font-family: "open";
         font-weight: 300;
+        @include phone() {
+            text-align: center;
+      }
     }
     .left_num {
-        margin-top: 10px;
+        margin-top: rem(10px);
         color: #e45028;
     }
     .soc-ico {
-        width: 20px;
-        height: 20px;
+        width: rem(20px);
+        height: rem(20px);
         fill: #585858;
-        margin-right: 20px;
+        margin-right: rem(20px);
         transition: 0.4s;
         &:hover {
             fill: #fff;
