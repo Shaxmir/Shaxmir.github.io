@@ -424,19 +424,29 @@
         display: flex;
         width: 100%;
         height: 100%;
+        @include tab() {
+            justify-content: center;
+        }
     }
     .title {
         color: #f9b43b;
         font-size: 70px;
+        justify-content: flex-start;
+        @include tab() {
+            justify-content: center;
+            font-size: 50px;
+        }
     }
     .accordion_list {
         display: flex;
         flex-direction: column;
         list-style: none;
         position: absolute;
-        left: 50%;
-        transform: translate(-40%,0);
+        
 
+    }
+    .accordion_scroll {
+        display: flex;
     }
     .scrolls_ico::before {
         content: "";
@@ -454,8 +464,11 @@
         margin-top: 40px;
         width: 100%;
         position: relative;
+        &:hover .accordion_link{
+            color: #f9b43b;
+        }
         @include tab() {
-            margin-left: 25%;
+            align-items: center;
         }
         &:hover  .accordion_info{
             max-height:  110px;
@@ -474,21 +487,25 @@
         top: 5px;
         left: -15px;
     }
-    // .active .accordion_info{
-    //     max-height: 110px;
-    //     @include tab() {
-    //         max-height: 200px;
-    //     }
-    // }
-    // .active .scrolls_ico::before {
-    //     background: url("../img/ico/up.png");
-    //     background-repeat: no-repeat;
-    //     position: absolute;
-    //     width: 15px;
-    //     height: 15px;
-    //     top: 5px;
-    //     left: -15px;
-    // }
+    .active .accordion_info{
+        max-height: 110px;
+        @include tab() {
+            max-height: 200px;
+        }
+    }
+    .active .scrolls_ico::before {
+        background: url("../img/ico/up.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 5px;
+        left: -15px;
+       
+    }
+    .active .accordion_link {
+        color: #f9b43b;
+    }
     .accordion_link {
         font-family: "open";
         font-weight: bold;
@@ -516,6 +533,7 @@
             border-radius: 50%;
             width: 100px;
             height: 100px;
+            flex: 1 0 auto;
             img {
                 width: 100%;
                 height: 100%;
