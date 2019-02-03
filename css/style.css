@@ -732,6 +732,9 @@ body {
     position: absolute; }
   .team .accordion_scroll {
     display: flex; }
+  @media screen and (max-width: 768px) {
+    .team .scrolls_ico {
+      position: relative; } }
   .team .scrolls_ico::before {
     content: "";
     background: url("../img/ico/down.png");
