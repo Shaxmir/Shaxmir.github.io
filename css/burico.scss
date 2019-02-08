@@ -4,13 +4,7 @@
         display: block;
         cursor: pointer;
     }
-    .active::before {
-        content: "\2716";
-        font-size: 25px;
-        position: absolute;
-        color: #c1c2c2;
-        z-index: 91;
-    }
+   
 }
 .burger_ico {
     // display: none;

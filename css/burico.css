@@ -9,8 +9,8 @@ Error: Undefined mixin 'tab'.
 4:         display: block;
 5:         cursor: pointer;
 6:     }
-7:     .active::before {
-8:         content: "\2716";
+7:    
+8: }
 
 Backtrace:
 C:\OSPanel\domains\test.ru\css\burico.scss:3:in `tab'
@@ -63,4 +63,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tab'.\A         on line 3 of C:\OSPanel\domains\test.ru\css\burico.scss, in `tab'\A         from line 3 of C:\OSPanel\domains\test.ru\css\burico.scss\A \A 1: .burger_span {\A 2:     display: none; \A 3:     @include tab() {\A 4:         display: block;\A 5:         cursor: pointer;\A 6:     }\A 7:     .active::before {\A 8:         content: \"\2716\";"; }
+  content: "Error: Undefined mixin 'tab'.\A         on line 3 of C:\OSPanel\domains\test.ru\css\burico.scss, in `tab'\A         from line 3 of C:\OSPanel\domains\test.ru\css\burico.scss\A \A 1: .burger_span {\A 2:     display: none; \A 3:     @include tab() {\A 4:         display: block;\A 5:         cursor: pointer;\A 6:     }\A 7:    \A 8: }"; }
