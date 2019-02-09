@@ -1052,7 +1052,7 @@ img {
 // Слайдер бургер bg_burger_slide
 .bg_burger_slaid {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     min-height: rem(650px);
     background: #f9b43b; /* Old browsers */
@@ -1060,7 +1060,8 @@ img {
     background: -webkit-linear-gradient(top, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 ); /* IE6-9 */
-    position: relative;
+    display: flex;
+    align-items: center;
 
     .slider_left{
         width: 100%;
@@ -1123,6 +1124,16 @@ img {
         position: absolute;
         top: 10%;
         left: 10%;
+
+        &:hover { 
+             .up_right{
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        
+
     }
 
     .up_left{
@@ -1137,7 +1148,7 @@ img {
         justify-content: center;
         transition: 0.4s;
         cursor: pointer;
-        
+
         .conteiner_img {
             width: rem(45px); 
             height: rem(40px);
@@ -1149,8 +1160,8 @@ img {
         &:hover {
             background: #c1401e;
             .up_right {
-                opacity: 1;
-            }    
+                top: 0;
+            }  
         }
         
 
@@ -1195,10 +1206,10 @@ img {
     .up_right {
        display: flex;
        opacity: 0;
-       transition: 0.4s;
-       &:hover {
-           opacity: 1;
-       }
+       transition: opacity 0.4s;
+       top: -1000px;
+       position: absolute;
+        left: rem(90px);
        .up_list {
            display: flex;
            flex-direction: column;
@@ -1245,6 +1256,11 @@ img {
     .slider {
         width: 100%;
         height: 100%;
+        margin-left: rem(100px);
+        @include tab() {
+        margin-left: 0;
+
+        }
     }
     .slider_right {
         width: 100%;
