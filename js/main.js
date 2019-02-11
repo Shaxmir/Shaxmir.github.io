@@ -16,62 +16,67 @@ iks.addEventListener('click', e => {
     } 
 });
 
+
+
+
+/////////////////////////////////////////////////ACCORDION///////////////////////////////////////////
+
+
 const accordion = document.querySelectorAll('.accordion_item');
 const touch = document.querySelectorAll('.accordion_link');
 
 for (let i = 0; i < touch.length; i++) {
-    const le = touch[i];
+    touch[i].onclick = function() {
+        
+        hideAll();
+        // hide();
+    
+    if(accordion[i].classList.contains('active') == false) {
+        accordion[i].classList.add('active');
+        accordion[i].classList.remove('close');
+        console.log('Открыл');
+  
 
-}
-for (let i = 0; i < accordion.length; i++) {
-    const el = accordion[i];
+    }
+    
+
+    
+        
     
 }
-
-touch[0].addEventListener('click', a => {
-    if(accordion[0].classList.contains('active') == false) {
-        accordion[0].classList.add('active');
-        console.log('ntntntntntntn');
-  
-
-    }else {
-        accordion[0].classList.remove('active');
-        console.log('dsfdsfsdfsdfsdfsdf');
     }
-});
-touch[1].addEventListener('click', a => {
-    if(accordion[1].classList.contains('active') == false) {
-        accordion[1].classList.add('active');
-        console.log('ntntntntntntn');
-  
 
-    }else {
-        accordion[1].classList.remove('active');
-        console.log('dsfdsfsdfsdfsdfsdf');
-    }
-});
-touch[2].addEventListener('click', a => {
-    if(accordion[2].classList.contains('active') == false) {
-        accordion[2].classList.add('active');
-        console.log('ntntntntntntn');
-  
 
-    }else {
-        accordion[2].classList.remove('active');
-        console.log('dsfdsfsdfsdfsdfsdf');
-    }
-});
-touch[3].addEventListener('click', a => {
-    if(accordion[3].classList.contains('active') == false) {
-        accordion[3].classList.add('active');
-        console.log('ntntntntntntn');
-  
+// function hide() {
+//     for (let i = 0; i < accordion.length; i++) {
+//         touch[i].onclick = function () {
+            
+        
+//         if(accordion[i].classList.contains('close') == false) {
+          
+//             accordion[i].classList.toggle("active");
+//             accordion[i].classList.toggle("close");
+//             console.log('Закрыл');
+        
+//     }
+    
+// }
+// }
+// }
+function hideAll() {
+    
 
-    }else {
-        accordion[3].classList.remove('active');
-        console.log('dsfdsfsdfsdfsdfsdf');
+for (let i = 0; i < accordion.length; i++) {
+    
+    if (accordion[i].classList.contains('active')) {
+        accordion[i].classList.remove('active');
+        console.log('Закрыл открытый');
+
+        
     }
-});
+    
+}
+}
 
 
 // const acc = document.querySelector('.accord_item');
