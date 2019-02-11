@@ -556,23 +556,23 @@
         @include tab() {
             align-items: center;
         }
-        &:hover  .accordion_info{
-            max-height:  rem(110px);
-            @include tab() {
-                max-height: rem(200px);
-            }
-        }
+        // &:hover  .accordion_info{
+        //     max-height:  rem(110px);
+        //     @include tab() {
+        //         max-height: rem(200px);
+        //     }
+        // }
         
     }
-    .accordion_item:hover  .scrolls_ico::before {
-        background: url("../img/ico/up.png");
-        background-repeat: no-repeat;
-        position: absolute;
-        width: rem(15px);
-        height: rem(15px);
-        top: rem(5px);
-        left: rem(-15px);
-    }
+    // .accordion_item:hover  .scrolls_ico::before {
+    //     background: url("../img/ico/up.png");
+    //     background-repeat: no-repeat;
+    //     position: absolute;
+    //     width: rem(15px);
+    //     height: rem(15px);
+    //     top: rem(5px);
+    //     left: rem(-15px);
+    // }
     .active .accordion_info{
         max-height: rem(110px);
         @include tab() {
@@ -681,15 +681,15 @@
     height: 100%;
     cursor: pointer;
     
-    &:hover .accord_text{
-        max-width: rem(700px);  
-        @include tab(){
-            max-width: rem(400px);
-        } 
-        @include phone(){
-            max-width: rem(300px);
-        } 
-    }
+    // &:hover .accord_text{
+    //     max-width: rem(700px);  
+    //     @include tab(){
+    //         max-width: rem(400px);
+    //     } 
+    //     @include phone(){
+    //         max-width: rem(300px);
+    //     } 
+    // }
     &:hover .accord_link span{
         color: #f9b43b;
     }
