@@ -1,3 +1,8 @@
+
+/////////////////////////////////////////////////BURGER MENU///////////////////////////////////////////
+
+
+
 const menu = document.querySelector('.head');
 const burger = document.querySelector('.touch');
 const iks = document.querySelector('.iks');
@@ -19,17 +24,17 @@ iks.addEventListener('click', e => {
 
 
 
-/////////////////////////////////////////////////ACCORDION///////////////////////////////////////////
+/////////////////////////////////////////////////ACCORDION TEAM///////////////////////////////////////////
 
 
 const accordion = document.querySelectorAll('.accordion_item');
 const touch = document.querySelectorAll('.accordion_link');
 
 for (let i = 0; i < touch.length; i++) {
-    touch[i].onclick = function() {
-        
-        hideAll();
-        // hide();
+    touch[i].onclick = function(a) {
+        a.preventDefault();
+
+        hide();
     
     if(accordion[i].classList.contains('active') == false) {
         accordion[i].classList.add('active');
@@ -47,23 +52,8 @@ for (let i = 0; i < touch.length; i++) {
     }
 
 
-// function hide() {
-//     for (let i = 0; i < accordion.length; i++) {
-//         touch[i].onclick = function () {
-            
-        
-//         if(accordion[i].classList.contains('close') == false) {
-          
-//             accordion[i].classList.toggle("active");
-//             accordion[i].classList.toggle("close");
-//             console.log('Закрыл');
-        
-//     }
-    
-// }
-// }
-// }
-function hideAll() {
+
+function hide() {
     
 
 for (let i = 0; i < accordion.length; i++) {
@@ -79,17 +69,46 @@ for (let i = 0; i < accordion.length; i++) {
 }
 
 
-// const acc = document.querySelector('.accord_item');
-// const tou = document.querySelector('.accord_link');
+/////////////////////////////////////////////////ACCORDION MENU///////////////////////////////////////////
 
+const acc = document.querySelectorAll('.accord_item');
+const but = document.querySelectorAll('.accord_link');
 
-// tou.addEventListener('click', a => {
-//     if(acc.classList.contains('active') == false) {
-//         acc.classList.add('active');
+for (let i = 0; i < but.length; i++) {
+    but[i].onclick = function(e) {
+        
+        e.preventDefault();
+        hideAll();
+        // hide();
+    
+    if(acc[i].classList.contains('active') == false) {
+        acc[i].classList.add('active');
+        acc[i].classList.remove('close');
+        console.log('Открыл');
   
 
-//     }
-//     if(acc.classList.contains('active') == true) {
-//         acc.classList.remove('active');
-//     }
-// });
+    }
+    
+
+    
+        
+    
+}
+    }
+
+
+
+function hideAll() {
+    
+
+for (let i = 0; i < acc.length; i++) {
+    
+    if (acc[i].classList.contains('active')) {
+        acc[i].classList.remove('active');
+        console.log('Закрыл открытый');
+
+        
+    }
+    
+}
+}

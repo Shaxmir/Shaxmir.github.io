@@ -690,9 +690,7 @@
     //         max-width: rem(300px);
     //     } 
     // }
-    &:hover .accord_link span{
-        color: #f9b43b;
-    }
+    
     
     .dark {
         background-color: rgba(0, 0, 0, 0.7);
@@ -700,19 +698,18 @@
         width: 100%;
     }
 }
-.active {
-    .accord_text{
-        max-width: rem(700px);
-        @include tab(){
-            max-width: rem(400px);
-        } 
-        @include tab(){
-            max-width: 0;
-        } 
-    }
-    .accord_link span{
-        color: #f9b43b;
-    }
+.active .accord_text{
+    max-width: rem(700px);  
+    @include tab(){
+        max-width: rem(400px);
+    } 
+    @include phone(){
+        max-width: rem(300px);
+    } 
+   
+}
+.active .accord_link span{
+    color: #f9b43b;
 }
 .accord_link {
     height: 100%;
@@ -1063,6 +1060,22 @@ img {
     display: flex;
     align-items: center;
 
+    .slide_in {
+        position: relative;
+        width: 1100px;
+        overflow: hidden;
+        display: flex;
+    .slide_kadr {
+        display: flex;
+        right: 0;
+        position: relative;
+
+      
+    }
+}
+
+
+
     .slider_left{
         width: 100%;
         @include tab() {
@@ -1074,8 +1087,7 @@ img {
         }
     }
 
-
-
+    
 
     .scroll_left{
     position: absolute;
