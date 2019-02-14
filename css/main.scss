@@ -1065,15 +1065,24 @@ img {
         width: 100%;
         overflow: hidden;
         display: flex;
+        @include tab(){
+            justify-content: center;
+            align-items: center;
+        }
     .slide_kadr {
         display: flex;
         right: 0;
+        // @include tab() {
+        // right: rem(0px);
+
+        // }
         position: relative;
         list-style: none;
         transition: right 0.4s;
         .slide_item_kadr {
             width: 100%;
             flex: 0 0 auto;
+            position: relative;
         }      
     }
 }
@@ -1099,6 +1108,7 @@ img {
     height: 100%;
     transition: 0.3s;    
     cursor: pointer;
+    z-index: 10;
     &:hover {
         background: rgba(0, 0, 0, 0.3);
         height: 100%;
@@ -1140,6 +1150,9 @@ img {
         position: absolute;
         top: 10%;
         left: 10%;
+        @include tab() {
+            left: 30%;
+        }
 
         &:hover { 
              .up_right{
@@ -1196,7 +1209,7 @@ img {
         left: 10%;
         @include tab(){
             top: 10%;
-            left: 80%;
+            left: 60%;
         }
         .img_down {
             position: relative;
@@ -1266,6 +1279,7 @@ img {
         @include tab(){
             justify-content: center;
             flex-direction: column;
+            width: 50%;
         }
         }
     }
