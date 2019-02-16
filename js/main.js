@@ -120,11 +120,17 @@ const left = document.querySelector('.scroll_left');
 const right = document.querySelector('.scroll_right');
 const item = document.querySelector('.slide_kadr');
 
-const step = item.firstElementChild.getBoundingClientRect().width;
+let step = item.firstElementChild.getBoundingClientRect().width;
 const slidesInView = 1;
-const maxRight = (item.children.length - slidesInView) * step;
+
 const minRight = 0;
 let currentRight = 0;
+window.addEventListener('resize', e => {
+    step = item.firstElementChild.getBoundingClientRect().width;
+    });
+const maxRight = (item.children.length - slidesInView) * step;
+
+
 
 right.addEventListener('click', e => {
     
@@ -145,4 +151,34 @@ left.addEventListener('click', e => {
         currentRight = maxRight;
         item.style.right = maxRight + 'px';  
     }
+});
+
+
+/////////////////////////////////////////////////SEND FORM///////////////////////////////////////////
+
+
+// var formData = new FormData('.form');
+const form = document.querySelector('.form');
+const button = document.querySelector('.buy_in');
+test = form.innerHTML || form.textContent;
+
+if (form.elements.text === true) {
+console.log('Что то есть');
+    
+}else {
+console.log('Нету ничего');
+
+}
+button.addEventListener('click', e => {
+    e.preventDefault();
+
+    // try {
+    //     if (condition) {
+            
+    //     }
+        
+    // } catch (error) {
+        
+    // }
+
 });
