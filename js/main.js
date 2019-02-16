@@ -120,39 +120,28 @@ const left = document.querySelector('.scroll_left');
 const right = document.querySelector('.scroll_right');
 const item = document.querySelector('.slide_kadr');
 
-let step = item.firstElementChild.getBoundingClientRect().width;
-const slidesInView = 1;
-
-const minRight = 0;
-let currentRight = 0;
-window.addEventListener('resize', e => {
-    step = item.firstElementChild.getBoundingClientRect().width;
-    });
-const maxRight = (item.children.length - slidesInView) * step;
-
-
-
-right.addEventListener('click', e => {
-    
-    if(currentRight < maxRight) {
-        currentRight += step;
-        item.style.right = `${currentRight}px`;
-    }else {
-        currentRight = 0;
-        item.style.right = 0;  
+right.addEventListener("click", function() {
+    loop("right");
+    slideChange()
+  });
+  
+  left.addEventListener("click", function() {
+    loop("left");
+    slideChange()
+  });
+  
+  function loop(direction) {
+    if (direction === "right") {
+      item.appendChild(item.firstElementChild);
+    } else {
+      item.insertBefore(item.lastElementChild, item.firstElementChild);
     }
-});
-left.addEventListener('click', e => {
-    
-    if(currentRight > minRight) {
-        currentRight -= step;
-        item.style.right = `${currentRight}px`;
-    }else {
-        currentRight = maxRight;
-        item.style.right = maxRight + 'px';  
-    }
-});
+  }
 
+  function slideChange() {
+    console.log("__start");
+    var myVar = setTimeout(change, 1000);
+  }
 
 /////////////////////////////////////////////////SEND FORM///////////////////////////////////////////
 
