@@ -26,7 +26,7 @@
     overflow: hidden;
     position: relative;
   }
-  @each $var in bg, bg_two,bg_team,bg_menu,bg_form,bg_map {
+  @each $var in bg, bg_two,bg_team,bg_menu,bg_form {
     .#{$var} {
     background: url('../img/#{$var}.png');
     background-size: cover;
@@ -37,6 +37,15 @@
     height: 100vh;
     min-height: rem(650px);
 
+    }
+    .bg_map {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    min-height: rem(650px);
     }
     
     .big_block {
@@ -993,6 +1002,7 @@ img {
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 10;
     @include phone() {
         height: rem(100px);
   }

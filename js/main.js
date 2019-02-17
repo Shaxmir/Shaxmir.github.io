@@ -171,3 +171,85 @@ button.addEventListener('click', e => {
     // }
 
 });
+//////////////////////////////////////////////MAP/////////////////////////////////////////////////////////////
+
+ 
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+                center: [59.939095, 30.315868],
+                zoom: 9
+                
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+    
+            // Создаём макет содержимого.
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            ),
+    
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'Здесь наше заведение',
+                balloonContent: 'Вы можете найти нас в центре города!'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: '/icons/map-marker.svg',
+                // Размеры метки.
+                iconImageSize: [30, 42],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-5, -38]
+            }),
+    
+            myPlacemarkWithContent = new ymaps.Placemark([59.919095, 30.305868], {
+                hintContent: 'Адмиралтейский район',
+                balloonContent: 'Будите тут , не забудьте перекусить =)',
+                // iconContent: '12'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#imageWithContent',
+                // Своё изображение иконки метки.
+                iconImageHref: '/icons/map-marker.svg',
+                // Размеры метки.
+                iconImageSize: [30, 42],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-24, -24],
+                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [15, 15],
+                // Макет содержимого.
+                iconContentLayout: MyIconContentLayout
+            }),
+            myPlacemarkWithContent2 = new ymaps.Placemark([59.989095, 30.345868], {
+                hintContent: 'Лесной проспект',
+                balloonContent: 'Запах наших бургеров сам приведет вас к нам =)',
+                // iconContent: '12'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#imageWithContent',
+                // Своё изображение иконки метки.
+                iconImageHref: '/icons/map-marker.svg',
+                // Размеры метки.
+                iconImageSize: [30, 42],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-24, -24],
+                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [15, 15],
+                // Макет содержимого.
+                iconContentLayout: MyIconContentLayout
+            });
+            
+    
+        myMap.geoObjects
+            .add(myPlacemark)
+            .add(myPlacemarkWithContent)
+            .add(myPlacemarkWithContent2);
+
+            myMap.behaviors.disable('scrollZoom') 
+    });

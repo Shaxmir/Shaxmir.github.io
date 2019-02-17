@@ -34,6 +34,15 @@ body {
   height: 100vh;
   min-height: 40.625rem; }
 
+.bg_map {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 40.625rem; }
+
 .big_block {
   margin: 0;
   padding: 0; }
@@ -73,6 +82,15 @@ body {
 
 .bg_two {
   background: url("../img/bg_two.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 40.625rem; }
+
+.bg_map {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -128,6 +146,15 @@ body {
   height: 100vh;
   min-height: 40.625rem; }
 
+.bg_map {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 40.625rem; }
+
 .big_block {
   margin: 0;
   padding: 0; }
@@ -167,6 +194,15 @@ body {
 
 .bg_menu {
   background: url("../img/bg_menu.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 40.625rem; }
+
+.bg_map {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -222,45 +258,7 @@ body {
   height: 100vh;
   min-height: 40.625rem; }
 
-.big_block {
-  margin: 0;
-  padding: 0; }
-
-@media screen and (max-width: 768px) {
-  .buy_bur {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 10.625rem;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 80px; } }
-.buy {
-  font-family: "open";
-  font-weight: 200;
-  font-style: normal;
-  background: #c1401e;
-  width: 6.25rem;
-  height: 2.1875rem;
-  border-radius: 0.3125rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  transition: 0.4s;
-  cursor: pointer; }
-
-.content {
-  flex: 0 0 auto;
-  width: 100vw;
-  height: 100vh;
-  position: relative; }
-
 .bg_map {
-  background: url("../img/bg_map.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1175,7 +1173,8 @@ body {
   height: 4.375rem;
   position: absolute;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  z-index: 10; }
   @media screen and (max-width: 480px) {
     .footer {
       height: 6.25rem; } }
