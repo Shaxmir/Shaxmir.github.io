@@ -116,32 +116,32 @@ for (let i = 0; i < acc.length; i++) {
 
 /////////////////////////////////////////////////SLAIDER///////////////////////////////////////////
 
-const left = document.querySelector('.scroll_left');
-const right = document.querySelector('.scroll_right');
-const item = document.querySelector('.slide_kadr');
+// const left = document.querySelector('.scroll_left');
+// const right = document.querySelector('.scroll_right');
+// const item = document.querySelector('.slide_kadr');
 
-right.addEventListener("click", function() {
-    loop("right");
-    slideChange()
-  });
+// right.addEventListener("click", function() {
+//     loop("right");
+//     slideChange()
+//   });
   
-  left.addEventListener("click", function() {
-    loop("left");
-    slideChange()
-  });
+//   left.addEventListener("click", function() {
+//     loop("left");
+//     slideChange()
+//   });
   
-  function loop(direction) {
-    if (direction === "right") {
-      item.appendChild(item.firstElementChild);
-    } else {
-      item.insertBefore(item.lastElementChild, item.firstElementChild);
-    }
-  }
+//   function loop(direction) {
+//     if (direction === "right") {
+//       item.appendChild(item.firstElementChild);
+//     } else {
+//       item.insertBefore(item.lastElementChild, item.firstElementChild);
+//     }
+//   }
 
-  function slideChange() {
-    console.log("__start");
-    var myVar = setTimeout(change, 1000);
-  }
+//   function slideChange() {
+//     console.log("__start");
+//     var myVar = setTimeout(change, 1000);
+//   }
 
 /////////////////////////////////////////////////SEND FORM///////////////////////////////////////////
 
