@@ -19,8 +19,8 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative; }
 
@@ -45,7 +45,11 @@ body {
 
 .big_block {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%;
+  min-height: 650px;
+  transition: 1s;
+  will-change: transform; }
 
 @media screen and (max-width: 768px) {
   .buy_bur {
@@ -101,7 +105,11 @@ body {
 
 .big_block {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%;
+  min-height: 650px;
+  transition: 1s;
+  will-change: transform; }
 
 @media screen and (max-width: 768px) {
   .buy_bur {
@@ -157,7 +165,11 @@ body {
 
 .big_block {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%;
+  min-height: 650px;
+  transition: 1s;
+  will-change: transform; }
 
 @media screen and (max-width: 768px) {
   .buy_bur {
@@ -213,7 +225,11 @@ body {
 
 .big_block {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%;
+  min-height: 650px;
+  transition: 1s;
+  will-change: transform; }
 
 @media screen and (max-width: 768px) {
   .buy_bur {
@@ -269,7 +285,71 @@ body {
 
 .big_block {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%;
+  min-height: 650px;
+  transition: 1s;
+  will-change: transform; }
+
+@media screen and (max-width: 768px) {
+  .buy_bur {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 10.625rem;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 80px; } }
+.buy {
+  font-family: "open";
+  font-weight: 200;
+  font-style: normal;
+  background: #c1401e;
+  width: 6.25rem;
+  height: 2.1875rem;
+  border-radius: 0.3125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  transition: 0.4s;
+  cursor: pointer; }
+
+.content {
+  flex: 0 0 auto;
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+
+.bg_video {
+  background: url("../img/bg_video.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 40.625rem; }
+
+.bg_map {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 40.625rem; }
+
+.big_block {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 650px;
+  transition: 1s;
+  will-change: transform; }
 
 @media screen and (max-width: 768px) {
   .buy_bur {
@@ -1523,6 +1603,58 @@ body {
     z-index: 91;
     top: 5%;
     right: 5%; }
+
+.videoplayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; }
+  .videoplayer .title span {
+    font-size: 3.75rem;
+    margin-top: 3.125rem; }
+  .videoplayer div#video_player_box {
+    background: #000; }
+  .videoplayer div#video_controls_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    color: #CCC;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; }
+  .videoplayer button#playpausebtn {
+    background: url("/img/ico/playmin.png");
+    border: none;
+    width: 16px;
+    height: 22px;
+    cursor: pointer;
+    opacity: 0.5; }
+  .videoplayer #mutebtn {
+    background: url("/img/ico/volum.png");
+    border: none;
+    width: 16px;
+    height: 22px;
+    cursor: pointer;
+    opacity: 0.5; }
+  .videoplayer button#playpausebtn:hover {
+    opacity: 1; }
+  .videoplayer input#seekslider {
+    width: 180px; }
+  .videoplayer input#volumeslider {
+    width: 80px; }
+  .videoplayer input[type='range'] {
+    -webkit-appearance: none !important;
+    background: #000;
+    border: #666 1px solid;
+    height: 4px; }
+  .videoplayer input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background: #FFF;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    cursor: pointer; }
 
 .burger_span {
   display: none; }
