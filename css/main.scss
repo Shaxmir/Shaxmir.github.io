@@ -23,7 +23,7 @@
     // max-width: rem(1100px);
     // min-height: 100%;
     width: 100%;
-    // height: 100%;
+    height: 100%;
     overflow: hidden;
     position: relative;
   }
@@ -1487,6 +1487,7 @@ img {
         right: 0;
         height: 35px;
         background: #3e3e3e;
+        z-index: 11;
       }
       .player__volume {
           background: url('/img/ico/volum.png');
@@ -1585,6 +1586,21 @@ img {
         right: 20px;
         color: #626262;
         font-weight: bold;
+      }
+      .backscrin {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: url('/img/scrin.png') center center no-repeat;
+          position: absolute;
+          z-index: 10;
+          .touch_play {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              cursor: pointer;
+              transform: translate(-50%,-50%);
+          }
       }
 }
 

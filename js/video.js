@@ -1,5 +1,5 @@
 let player;
-
+var backscrin = document.querySelector('.backscrin');
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("yt-player", {
     width: "660",
@@ -52,13 +52,29 @@ function onPlayerStateChange(event) {
   }
 }
 
+
 $(".player__start").on("click", e => {
   const playerStatus = player.getPlayerState(); // 0 - ended, 1 - played, 2 - paused ...
 
   if (playerStatus !== 1) {
     player.playVideo();
+    backscrin.style.display = 'none';
   } else {
     player.pauseVideo();
+    backscrin.style.display = 'block';
+
+  }
+  
+});
+$('.backscrin').on("click", e => {
+  const playerStatus = player.getPlayerState(); // 0 - ended, 1 - played, 2 - paused ...
+  if (playerStatus !== 1) {
+    player.playVideo();
+    backscrin.style.display = 'none';
+  } else {
+    player.pauseVideo();
+    backscrin.style.display = 'block';
+
   }
 });
 
@@ -113,11 +129,9 @@ $(".player__volum").on("click", e => {
 	const newPlayerTime = (player.getVolume() / 100) * clickedPercents;
   
 	changeButton(clickedPercents);
-	player.setVolume(newPlayerTime);
-	console.log(clickedPercents);
+	player.setVolume(clickedPercents);
   });
   
- 
   
   
   

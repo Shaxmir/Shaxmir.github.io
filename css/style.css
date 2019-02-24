@@ -20,6 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative; }
 
@@ -1635,7 +1636,8 @@ body {
     left: 0;
     right: 0;
     height: 35px;
-    background: #3e3e3e; }
+    background: #3e3e3e;
+    z-index: 11; }
   .videoplayer .player__volume {
     background: url("/img/ico/volum.png");
     position: absolute;
@@ -1718,6 +1720,19 @@ body {
     right: 20px;
     color: #626262;
     font-weight: bold; }
+  .videoplayer .backscrin {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("/img/scrin.png") center center no-repeat;
+    position: absolute;
+    z-index: 10; }
+    .videoplayer .backscrin .touch_play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      cursor: pointer;
+      transform: translate(-50%, -50%); }
 
 .modal_window {
   position: relative;
