@@ -1719,6 +1719,46 @@ body {
     color: #626262;
     font-weight: bold; }
 
+.modal_window {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  display: none; }
+  .modal_window .in_window {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw; }
+    .modal_window .in_window .window {
+      width: 28.125rem;
+      height: 15.625rem;
+      padding: 0.9375rem;
+      background: #fff;
+      border-radius: 0.625rem;
+      top: 50%;
+      transform: translate(0, 80%); }
+      .modal_window .in_window .window h1.title {
+        font-size: 2.5rem;
+        color: #e45028;
+        text-align: center; }
+      .modal_window .in_window .window h3.title {
+        font-size: 1.625rem;
+        text-align: center; }
+    .modal_window .in_window .close::before {
+      content: "\2716";
+      font-size: 25px;
+      position: fixed;
+      color: #c1c2c2;
+      z-index: 91;
+      top: 2%;
+      right: 2%;
+      color: #000; }
+
 .burger_span {
   display: none; }
   @media screen and (max-width: 768px) {

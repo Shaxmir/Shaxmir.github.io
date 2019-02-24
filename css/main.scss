@@ -1588,3 +1588,51 @@ img {
       }
 }
 
+//////////Модельное окно///////
+.modal_window {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    // display: flex;
+    display: none;
+    .in_window {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background: rgba(0, 0, 0, 0.3);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100vw;
+        .window {
+            width: rem(450px);
+            height: rem(250px);
+            padding: rem(15px);
+            background: #fff;
+            border-radius: rem(10px);
+            top: 50%;
+            transform: translate(0, 80%);
+            h1.title {
+                font-size: rem(40px);
+                color: #e45028;
+                text-align: center;
+            }
+            h3.title {
+                font-size: rem(26px);
+                text-align: center;
+            }
+        }
+        .close::before {
+            content: "\2716";
+        font-size: 25px;
+        position: fixed;
+        color: #c1c2c2;
+        z-index: 91;
+        top: 2%;
+        right: 2%;
+        color: #000;
+        }
+    }
+}
+

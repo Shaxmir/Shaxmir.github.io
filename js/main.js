@@ -1,3 +1,4 @@
+// import { getMaxListeners } from "cluster";
 
 /////////////////////////////////////////////////BURGER MENU///////////////////////////////////////////
 
@@ -113,64 +114,60 @@ for (let i = 0; i < acc.length; i++) {
 }
 }
 
-
-/////////////////////////////////////////////////SLAIDER///////////////////////////////////////////
-
-// const left = document.querySelector('.scroll_left');
-// const right = document.querySelector('.scroll_right');
-// const item = document.querySelector('.slide_kadr');
-
-// right.addEventListener("click", function() {
-//     loop("right");
-//     slideChange()
-//   });
-  
-//   left.addEventListener("click", function() {
-//     loop("left");
-//     slideChange()
-//   });
-  
-//   function loop(direction) {
-//     if (direction === "right") {
-//       item.appendChild(item.firstElementChild);
-//     } else {
-//       item.insertBefore(item.lastElementChild, item.firstElementChild);
-//     }
-//   }
-
-//   function slideChange() {
-//     console.log("__start");
-//     var myVar = setTimeout(change, 1000);
-//   }
-
 /////////////////////////////////////////////////SEND FORM///////////////////////////////////////////
 
+var form = document.querySelector('#form');
+var btn = document.querySelector('#buy_in');
+var modalWin = document.querySelector('.modal_window');
+var close = document.querySelector('.close');
 
-// var formData = new FormData('.form');
-const form = document.querySelector('.form');
-const button = document.querySelector('.buy_in');
-test = form.innerHTML || form.textContent;
-
-if (form.elements.text === true) {
-console.log('Что то есть');
-    
-}else {
-console.log('Нету ничего');
-
-}
-button.addEventListener('click', e => {
-    e.preventDefault();
-
-    // try {
-    //     if (condition) {
-            
-    //     }
-        
-    // } catch (error) {
-        
-    // }
-
+btn.addEventListener('click', event => {
+    event.preventDefault();
+    if(validateForm(form)) {
+       var formdata = new FormData();
+       formdata.append('name', form.elements.name.value);
+       formdata.append('phone', form.elements.phone.value);
+       formdata.append('comment', form.elements.comments.value);
+       formdata.append('to', 'shaxrussian@gmail.com');
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = "json";
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+        xhr.send(formdata);
+        modalWin.style.display = 'flex';
+            xhr.addEventListener('load', () => {
+               if (xhr.response.status) {
+                console.log("Все ок!");
+               }
+            })
+    }
 });
+
+function validateForm(form){
+    let valid = true;
+
+    if (!validateField(form.elements.name)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.phone)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.comments)) {
+        valid = false;
+    }
+    return valid;
+}
+
+function validateField(field) {
+    field.nextElementSibling.textContent = field.validationMessage;
+    return field.checkValidity();
+}
+
+close.addEventListener('click', e => {
+    e.preventDefault();
+    modalWin.style.display = 'none';
+})
+
+
 //////////////////////////////////////////////MAP/////////////////////////////////////////////////////////////
 
  
